@@ -1,16 +1,19 @@
-# googletest-example
+# c-tutorials
 
-## Required
+[一週間で身につくC言語の基本](https://c-lang.sevendays-study.com/index.html )の練習問題をもとに、Google Testで実行可能な形式に改題した問題を収録しています。
 
-- gcc
-  - Using `g++` command
-- cmake
+etrobo-funではC言語に慣れていない人向けに、チュートリアルとしてこのリポジトリにある問題を実装して、テストカバレッジを100%にしてもらいます。
 
-## Usage
+## 準備
+
+### 環境構築
+
+etrobo環境を構築済みとする。いずれの操作もetrobo環境で行うこと。
 
 ```console
-$ git clone --recursive git@github.com:etrobo-fun/googletest-tutorial
-$ cd googletest-tutorial
+$ cd ~
+$ git clone --recursive git@github.com:etrobo-fun/c-tutorial
+$ cd c-tutorial
 $ cd external/googletest
 $ mkdir build
 $ cd build
@@ -18,35 +21,27 @@ $ cmake ..
 $ make
 $ cd ../../..
 $ make
-$ ./test_all
+$ ./test_all # 失敗するはず
 ```
 
-## Notice
+### 演習実施時
 
-Sources(`sample.cc`, `sample.h`, `sample_test.cc`) by [this page](https://rinatz.github.io/cpp-book/test-how-to-gtest/).
+etrobo環境を起動し、vscodeのターミナル上で下のコマンドを実行。
 
-The sources are protected by MIT license.
-
+```console
+code ~/c-tutorial
 ```
-MIT License
 
-Copyright (c) 2020 Ida Kenichiro
+## 問題一覧
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-```
+- [1. 最も基本的なプログラム（1日目）](probs/prob-1.md)
+- [2. 演算と変数（2日目）](probs/prob-2.md)
+- [3. 条件分岐（3日目）](probs/prob-3.md)
+- [4. 繰り返し処理（4日目）](probs/prob-4.md)
+- [5. 配列変数（5日目）](probs/prob-5.md)
+- [6. 関数（6日目）](probs/prob-6.md)
+- [7. ファイル分割（7日目）](probs/prob-7.md)
+- [ex4. ポインタとアドレス（応用2日目・応用3日目）](probs/prob-ex4.md)
+- [ex5. 文字列とポインタ（応用4日目）](probs/prob-ex5.md)
+- [ex6. 構造体（応用5日目）](probs/prob-ex6.md)
+- [ex7.ファイルの読み書き（応用6日目）](probs/prob-ex7.md)
