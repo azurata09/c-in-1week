@@ -1,4 +1,4 @@
-# c-tutorials
+# c-in-1week
 
 [一週間で身につくC言語の基本](https://c-lang.sevendays-study.com/index.html )の練習問題をもとに、Google Testで実行可能な形式に改題した問題を収録しています。
 
@@ -8,12 +8,12 @@ etrobo-funではC言語に慣れていない人向けに、チュートリアル
 
 ### 環境構築
 
-etrobo環境を構築済みとする。いずれの操作もetrobo環境で行うこと。
+etrobo環境を構築済みとする。いずれの操作もetrobo環境で行うこと。（一応、cmakeとgccが入っていれば動くはず。）
 
 ```console
 $ cd ~
-$ git clone --recursive git@github.com:etrobo-fun/c-tutorial
-$ cd c-tutorial
+$ git clone --recursive git@github.com:etrobo-fun/c-in-1week
+$ cd c-in-1week
 $ cd external/googletest
 $ mkdir build
 $ cd build
