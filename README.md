@@ -10,6 +10,11 @@ etrobo-funではC言語に慣れていない人向けに、チュートリアル
 
 etrobo環境を構築済みとする。いずれの操作もetrobo環境で行うこと。（一応、cmakeとgccが入っていれば動くはず。）
 
+> [!NOTE]
+> $は「この行が表すのはコマンドですよ」という意味なので、入力しない。
+>
+> 例: `$ echo Hi`と書かれていたら、`echo Hi`だけ入力する。
+
 ```console
 $ cd ~
 $ git clone --recursive git@github.com:etrobo-fun/c-in-1week
@@ -20,8 +25,8 @@ $ cd build
 $ cmake ..
 $ make
 $ cd ../../..
-$ make
-$ ./test_all # 失敗するはず
+$ ./wu build all
+$ ./wu run # めちゃめちゃ失敗するはず
 ```
 
 ### 演習実施時
@@ -29,8 +34,20 @@ $ ./test_all # 失敗するはず
 etrobo環境を起動し、vscodeのターミナル上で下のコマンドを実行。
 
 ```console
-code ~/c-tutorial
+$ code ~/c-in-1week
 ```
+
+開いたVSCodeの画面で、プログラムを作成する。
+
+動作確認は下のコマンドで行う。
+
+```console
+$ ./wu build <問題番号>
+$ ./wu build 3 # 問題3を解いた場合の例
+$ ./wu run
+```
+
+最低限、赤い文字で`[  FAILED  ]`と出ないようにする。
 
 ## 問題一覧
 
