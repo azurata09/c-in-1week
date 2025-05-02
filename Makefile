@@ -1,8 +1,9 @@
 mkfile_path = $(dir $(lastword $(MAKEFILE_LIST)))
+.PHONY: clean
 
 CC = g++
 CFLAGS = -std=c++11
-TARGET = test_all
+TARGET = objs/test_all
 
 GTEST_INCLUDES = -I$(mkfile_path)external/googletest/googletest/include
 GTEST_LIBDIR = -L$(mkfile_path)external/googletest/build/lib
@@ -20,7 +21,7 @@ objs/%.o: %.cpp
 	@mkdir -p $(dir $@)
 	$(CC) $(CFLAGS) $(INCLUDES) -c $< -o $@
 
-all: clean $(OBJS) $(TARGET)
+all: $(OBJS) $(TARGET)
 
 clean:
 	@rm -f $(OBJS) $(TARGET)

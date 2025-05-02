@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+# WU: c-in-1week utility
+if [[ $1 == "build" && $# -eq 2 ]]; then
+  make clean
+  if [[ $2 == "all" ]]; then
+    make all
+    exit 0
+  else
+    num=$2
+    make SRCS="src/prob${num}/*.cpp test/prob${num}_test.cpp"
+  fi
+elif [[ $1 == "run" ]]; then
+  ./objs/test_all
+else
+  echo "Usage: $0 build <問題番号 | all> | $0 run"
+  exit 1
+fi
