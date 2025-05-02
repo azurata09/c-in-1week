@@ -15,9 +15,19 @@ etrobo環境を構築済みとする。いずれの操作もetrobo環境で行�
 >
 > 例: `$ echo Hi`と書かれていたら、`echo Hi`だけ入力する。
 
+まず、リポジトリをフォークする。フォークは右上から行う。
+
+![ページ右上からフォークできる](images/fork.png)
+
+リポジトリをフォークすると、次のような画面になる。
+
+![forked fromという表記が追加されている](images/forked.png)
+
+そのうえで、次のコマンドを入力する。
+
 ```console
 $ cd ~
-$ git clone --recursive git@github.com:etrobo-fun/c-in-1week
+$ git clone --recursive git@github.com:<あなたのGitHub ID>/c-in-1week
 $ cd c-in-1week
 $ cd external/googletest
 $ mkdir build
@@ -27,7 +37,18 @@ $ make
 $ cd ../../..
 $ ./wu build all
 $ ./wu run # めちゃめちゃ失敗するはず
+...（中略）
+[----------] Global test environment tear-down
+[==========] 4 tests from 1 test suite ran. (1 ms total)
+[  PASSED  ] 2 tests.
+[  FAILED  ] 2 tests, listed below:
+[  FAILED  ] Prob1Test.Prob1_3_Correct
+[  FAILED  ] Prob1Test.Prob1_4_Correct
+
+ 2 FAILED TESTS
 ```
+
+`./wu run`したときに、↑のような表記が出ていればOK。
 
 ### 演習実施時
 
